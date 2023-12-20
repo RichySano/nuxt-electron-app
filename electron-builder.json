@@ -1,0 +1,58 @@
+ {
+    "appId": "gysapp.gys.fr",
+    "productName": "GysApp",
+    "asar": true,    
+    "directories": {
+        "output": "release/${version}"
+    },
+    "files": [
+        ".output/**/*",
+        "dist-electron"
+    ],
+    "linux": {
+        "target": ["deb"],
+        "icon": "public/icon_618x618.png",
+        "executableName": "GysApp",
+        "category": "Utility",
+        "packageCategory": "Utility"
+    },
+    "win": {
+        "target": [
+            {
+                "target": "squirrel",
+                "arch": ["x64"]
+            },
+            {
+                "target": "msi",
+                "arch": ["x64"]
+            },
+            {
+                "target": "nsis",
+                "arch": ["x64"]
+            }                
+        ],
+        "artifactName": "${productName}_${version}.${ext}",
+        "icon": "public/favicon.ico"
+    },  
+    "squirrelWindows": {  
+        "artifactName": "${productName}_${version}_squirrel.${ext}",      
+        "loadingGif": "public/icon.gif",
+        "iconUrl": "https://www.gys.fr/gys.ico",
+        "msi": false        
+    },
+    "msi": {
+        "oneClick": false,
+        "perMachine": false,
+        "createDesktopShortcut": true,   
+        "createStartMenuShortcut": true
+    },
+    "nsis": {
+        "artifactName": "${productName}_${version}_nsis.${ext}",
+        "oneClick": false,
+        "perMachine": false,
+        "allowToChangeInstallationDirectory": true,
+        "deleteAppDataOnUninstall": false,
+        "createDesktopShortcut": true,   
+        "createStartMenuShortcut": true
+    } 
+}

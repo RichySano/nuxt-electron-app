@@ -1,0 +1,38 @@
+{
+  "name": "gysapp",
+  "private": true,
+  "main": "dist-electron/main.js",
+  "version": "1.0.0",
+  "author": "Richard GUION <r.guion@gys.fr>",
+  "homepage": "https://www.gys.fr",
+  "description": "GysApp",
+  "module": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "generate": "nuxt generate",
+    "build:electron:windows": "nuxi build --prerender && electron-builder --windows",
+    "build:electron:linux": "nuxi build --prerender && electron-builder --linux"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^1.0.6",
+    "@types/electron-squirrel-startup": "^1.0.2",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "electron-builder-squirrel-windows": "^24.9.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-wix-msi": "^5.0.0",
+    "nuxt": "^3.8.2",
+    "nuxt-electron": "^0.6.0",
+    "typescript": "^5.3.3",
+    "vite-plugin-electron": "^0.15.4",
+    "vite-plugin-electron-renderer": "^0.14.5",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "serialport": "^12.0.0"
+  }
+}
